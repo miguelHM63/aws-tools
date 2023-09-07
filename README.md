@@ -10,7 +10,7 @@ This script edits EC2 security group rules using the AWS SDK for JavaScript v3.
 ## Setup
 
 1. Clone this repository
-2. Run `npm install` to install dependencies
+2. Run `npm install` or `yarn` to install dependencies
 3. Create a `.env` file with your credentials:
 
 ```
