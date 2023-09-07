@@ -1,4 +1,4 @@
-const getPublicIp = require("./getPublicIp.js");
+const getPublicIp = require("./updateSecurityGroupRule/getPublicIp.js");
 
 const securityGroups = async () => {
   const myPublicIp = await getPublicIp();
