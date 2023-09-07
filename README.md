@@ -5,7 +5,7 @@ This script edits EC2 security group rules using the AWS SDK for JavaScript v3.
 ## Prerequisites
 
 - AWS account with permissions to modify security groups
-- Node.js 12+ 
+- Node.js 12+
 
 ## Setup
 
@@ -19,17 +19,17 @@ AWS_SECRET_ACCESS_KEY=
 AWS_REGION=
 ```
 
-4. Update `securityGroups.js` with the security groups and rules to modify
+4. Update `updateSecurityGroupRule/securityGroups.js` with the security groups and rules to modify
 
 ## Usage
 
 Run the script with:
 
 ```
-node editSecurityGroupRules.js
+yarn update-security-groups-rules
 ```
 
-The script will modify the rules for the security groups specified in `securityGroups.js`.
+The script will modify the rules for the security groups specified in `updateSecurityGroupRule/securityGroups.js`.
 
 Logs will show progress and any errors.
 

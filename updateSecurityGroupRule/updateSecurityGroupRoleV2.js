@@ -11,8 +11,7 @@ const credentials = {
 console.log(process.env.AWS_ACCESS_KEY_ID);
 
 AWS.config.credentials = credentials;
-// AWS.config.update({ region: process.env.AWS_REGION }); // Reemplaza con tu región de AWS
-
+// AWS.config.update({ region: process.env.AWS_REGION });
 const ec2 = new AWS.EC2();
 
 async function editSecurityGroupRule() {
@@ -22,11 +21,11 @@ async function editSecurityGroupRule() {
       return ec2.modifySecurityGroupRules(rules).promise();
     });
     const result = await Promise.all(promises);
-    console.log("Regla de seguridad modificada exitosamente:", result.length);
+    console.log("Security group rule modified successfully::", result.length);
   } catch (error) {
-    console.error("Error al modificar la regla de seguridad:", error);
+    console.error("Error modifying security group rule", error);
   }
 }
 
-// Ejecuta la función para editar la regla de seguridad
+// run main function
 editSecurityGroupRule();
